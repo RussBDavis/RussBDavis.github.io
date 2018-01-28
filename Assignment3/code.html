@@ -1,1 +1,49 @@
+@@ -1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CS 573 Assignment Three</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<style>
+#Graph {
+    height: 500px
+    width: 500px
+}
+#Text {
+    height: 300px
+    width: 500px
+}
+bar {
+display: inline-block;
+width: 15px;
+height: 10px; /* Gets overridden by D3 height below */
+margin-right: 2px;
+background-color: teal;
+    }
+</style>
+</head>
+<body>
+<div id="Graph"></div>
+<div id="Text"></div>
+<script>
 
+
+var margin = 30
+    width = 750
+    height = 750;
+
+var y = d3.scale.linear()
+    .domain([0, 40])
+    .range([0, width - margin * 2]);
+var svg = d3.select('#Graph').selectAll('div')
+    .data(data)
+    .enter()
+    .append('div')
+    .attr('class','bar')
+    .style('height', function(d) {}
+            return d * 400 + 'px';
+    });
+</script>
+</body>
+</html>
